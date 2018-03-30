@@ -1,9 +1,10 @@
 FROM alpine:latest
-MAINTAINER Matt Bodenhamer <mbodenhamer@mbodenhamer.com>
 
 RUN apk add --no-cache \
     bash \
-    zip
+    zip \
+    rsync
 
 COPY docker-entrypoint.sh /entrypoint.sh
+
 ENTRYPOINT ["/entrypoint.sh"]
